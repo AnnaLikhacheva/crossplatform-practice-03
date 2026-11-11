@@ -1,0 +1,15 @@
+{
+  "name": "electron-file-explorer",
+  "version": "1.0.0",
+  "description": "Практическая работа №3. Electron File Explorer (вариант 1: выбор каталога)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Лихачева Анна (группа ТРПО23-2)",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^45.3.0"
+  }
+}
