@@ -1,4 +1,5 @@
 const btnList = document.getElementById('btn-list');
+const btnChoose = document.getElementById('btn-choose');
 const list = document.getElementById('file-list');
 const currentDir = document.getElementById('current-dir');
 
@@ -31,3 +32,8 @@ async function showDir(dir) {
 // Задание 3: содержимое рабочего каталога
 btnList.addEventListener('click', () => showDir('.'));
 
+// Задание 4 (вариант 1): выбор каталога через системный диалог
+btnChoose.addEventListener('click', async () => {
+  const dir = await window.api.chooseDir();
+  if (dir) showDir(dir);
+});
