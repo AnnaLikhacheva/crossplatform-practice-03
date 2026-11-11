@@ -4,12 +4,36 @@
   "description": "Практическая работа №3. Electron File Explorer (вариант 1: выбор каталога)",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "electron-builder"
   },
   "author": "Лихачева Анна (группа ТРПО23-2)",
   "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
-    "electron": "^45.3.0"
+    "electron": "^45.3.0",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "ru.fa.student.fileexplorer",
+    "productName": "Electron File Explorer",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "index.html",
+      "styles.css",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "mac": {
+      "target": "dmg",
+      "identity": null
+    }
   }
 }
