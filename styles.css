@@ -1,0 +1,60 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f6fb;
+  color: #1f2433;
+}
+
+header {
+  padding: 18px 28px;
+  background: #2f4b8f;
+  color: #fff;
+}
+
+header h1 { margin: 0; font-size: 22px; }
+.author { margin: 4px 0 0; opacity: 0.85; font-size: 14px; }
+
+main { padding: 20px 28px; }
+
+.toolbar { display: flex; gap: 12px; }
+
+button {
+  padding: 9px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  background: #2f4b8f;
+  color: #fff;
+  cursor: pointer;
+}
+button:hover { background: #3c5db0; }
+button.secondary { background: #e2e7f3; color: #2f4b8f; }
+button.secondary:hover { background: #d3dbee; }
+
+.current-dir {
+  margin: 16px 0 8px;
+  font-size: 13px;
+  color: #5a6175;
+  word-break: break-all;
+}
+
+.file-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 380px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #dde2ee;
+  border-radius: 8px;
+}
+.file-list li {
+  padding: 7px 14px;
+  border-bottom: 1px solid #eef1f7;
+  font-size: 14px;
+}
+.file-list li:last-child { border-bottom: none; }
+.file-list li.dir { font-weight: 600; color: #2f4b8f; }
+.file-list li.error { color: #b3261e; }
